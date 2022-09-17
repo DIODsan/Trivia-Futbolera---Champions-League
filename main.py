@@ -1,3 +1,6 @@
+import time
+import random
+
 BLACK = '\033[30m'
 RED = '\033[31m'
 GREEN = '\033[32m'
@@ -7,8 +10,6 @@ MAGENTA = '\033[35m'
 CYAN = '\033[36m'
 WHITE = '\033[37m'
 RESET = '\033[39m'
-import time
-import random
 
 puntaje = random.randint(0, 33)
 iniciar_trivia = True
@@ -26,7 +27,7 @@ for numero_carga in range(5, 0, -1):
 
 print(
     '\nHola', nombre,
-    'qué bueno tenerte por aquí, por favor, ecribe la letra de la alternativa de tu elección y luego presiona Enter para enviar tu respuesta, respeta las minúsculas:\n'
+    'qué bueno tenerte por aquí, por favor, ecribe la letra de la alternativa de tu elección y luego presiona Enter para enviar tu respuesta:\n'
 )
 
 time.sleep(5)
@@ -47,10 +48,10 @@ while iniciar_trivia == True:
     print('c) Liverpool')
     print('d) Real Madrid')
 
-    respuesta_1 = input(GREEN + '\nTu respuesta es:' + RESET)
+    respuesta_1 = input(GREEN + '\nTu respuesta es:' + RESET).lower()
     while respuesta_1 not in ('a', 'b', 'c', 'd', 'f'):
         respuesta_1 = input(
-            '\nDebes responder a, b, c o d. Ingresa nuevamente tu respuesta: ')
+            '\nDebes responder a, b, c o d. Ingresa nuevamente tu respuesta: ').lower()
     if respuesta_1 == 'a':
         puntaje -= 15
         print(RED + '\n¡Incorrecto!', nombre,
@@ -88,10 +89,10 @@ while iniciar_trivia == True:
     print('c) Alfredo Di Stéfano')
     print('d) Paolo Maldini')
 
-    respuesta_2 = input(GREEN + '\nTu respuesta es:' + RESET)
+    respuesta_2 = input(GREEN + '\nTu respuesta es:' + RESET).lower()
     while respuesta_2 not in ('a', 'b', 'c', 'd'):
         respuesta_2 = input(
-            'Debes responder a, b, c o d. Ingresa nuevamente tu respuesta: ')
+            'Debes responder a, b, c o d. Ingresa nuevamente tu respuesta: ').lower()
     if respuesta_2 == 'a':
         puntaje -= 15
         print(
@@ -130,10 +131,10 @@ while iniciar_trivia == True:
     print('c) Cristiano Ronaldo')
     print('d) Karim Benzema')
 
-    respuesta_3 = input(GREEN + '\nTu respuesta es:' + RESET)
+    respuesta_3 = input(GREEN + '\nTu respuesta es:' + RESET).lower()
     while respuesta_3 not in ('a', 'b', 'c', 'd'):
         respuesta_3 = input(
-            'Debes responder a, b, c o d. Ingresa nuevamente tu respuesta: ')
+            'Debes responder a, b, c o d. Ingresa nuevamente tu respuesta: ').lower()
     if respuesta_3 == 'a':
         puntaje -= 15
         print(
@@ -174,10 +175,10 @@ while iniciar_trivia == True:
     print('c) Gilberto Silva, 20,00 segundos')
     print('d) Alessandro Del Piero, 20,10 segundos')
 
-    respuesta_4 = input(GREEN + '\nTu respuesta es:' + RESET)
+    respuesta_4 = input(GREEN + '\nTu respuesta es:' + RESET).lower()
     while respuesta_4 not in ('a', 'b', 'c', 'd'):
         respuesta_4 = input(
-            'Debes responder a, b, c o d. Ingresa nuevamente tu respuesta: ')
+            'Debes responder a, b, c o d. Ingresa nuevamente tu respuesta: ').lower()
     if respuesta_4 == 'b':
         puntaje = puntaje + 5
         print(
